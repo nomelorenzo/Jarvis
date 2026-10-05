@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#05070a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg">
+  <title>JARVIS</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#05070a;color:#eef2f7;font-family:Arial,sans-serif}
+    main{max-width:620px;margin:auto;min-height:100vh;padding:28px 18px 30px;display:flex;flex-direction:column}
+    h1{font-size:32px;letter-spacing:4px;margin:15px 0 4px}.sub{opacity:.65;margin-bottom:25px}
+    #status{padding:12px 14px;border:1px solid #26303a;border-radius:14px;background:#0b0f14;margin-bottom:14px}
+    #chat{flex:1;overflow:auto;display:flex;flex-direction:column;gap:10px;margin-bottom:15px}
+    .msg{padding:12px 14px;border-radius:16px;max-width:90%;line-height:1.4;white-space:pre-wrap}
+    .you{align-self:flex-end;background:#18212b}.jarvis{align-self:flex-start;background:#0d141b}
+    .controls{display:grid;grid-template-columns:1fr 1fr;gap:10px}.controls button{padding:15px;border:0;border-radius:14px;background:#17212b;color:white;font-size:16px}
+    .primary{grid-column:span 2;background:#1d5cff!important}.row{display:flex;gap:8px;margin-top:10px}
+    input{flex:1;padding:14px;border-radius:13px;border:1px solid #26303a;background:#0b0f14;color:white}
+    small{opacity:.55;display:block;margin-top:14px}
+  </style>
+</head>
+<body>
+<main>
+  <h1>JARVIS</h1>
+  <div class="sub">Assistente pessoal • Android</div>
+  <div id="status">Pronto.</div>
+  <div id="chat"></div>
+  <div class="row">
+    <input id="text" placeholder="Digite uma mensagem..." autocomplete="off">
+    <button id="send">Enviar</button>
+  </div>
+  <div class="controls">
+    <button id="listen" class="primary">🎙️ Falar com JARVIS</button>
+    <button id="install">➕ Instalar na tela inicial</button>
+    <button id="config">⚙️ Configurar servidor</button>
+  </div>
+  <small>O navegador precisa permitir microfone. Comando de baixar jogo abre a Play Store para confirmação.</small>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
